@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puja Gongal Shrestha - Home</title>
+	<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('mountain.webp') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            text-align: right;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            margin-top: 120px;
+            text-align: left;
+            padding: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 10px 20px 0;
+            background-color: #00A2FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .profile-img {
+            border-radius: 8px;
+            width: 200px;
+            height: auto;
+            position: absolute;
+            top: 10;
+            right: 40px;
+            margin-top: 20px;
+        }
+
+        .highlight-text {
+            color: #00A2FF;
+            font-size: 20px;
+            position: relative;
+            animation: moveLeftRight 10s ease-in-out infinite;
+        }
+
+        @keyframes moveLeftRight {
+            0% {
+                left: 0;
+            }
+            50% {
+                left: 100px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        .text-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+        }
+
+        .text-content {
+            max-width: 70%;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .text-section {
+                flex-direction: column; /* Stack content vertically */
+                padding: 10px;
+            }
+
+            .navbar a {
+                display: block; /* Stack menu items */
+                text-align: left;
+                padding: 10px 15px;
+            }
+
+            .profile-img {
+                position: relative;
+                margin: 20px 0 0 0;
+                float: none;
+                width: 150px; /* Smaller image size on mobile */
+            }
+
+            .container {
+                margin-top: 80px; /* Reduce top margin for better fit */
+                padding: 15px;
+            }
+
+            .container h1 {
+                font-size: 32px; /* Smaller heading size */
+            }
+
+            .btn {
+                width: 100%; /* Make buttons full width */
+                text-align: center;
+                margin: 10px 0;
+                padding: 15px 0;
+            }
+
+            .text-content {
+                max-width: 100%;
+                font-size: 16px; /* Slightly smaller text */
+            }
+        }
+
+        /* Further Adjustments for Large Mobile Devices (Like Samsung S24 Plus) */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .container h1 {
+                font-size: 36px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 18px;
+            }
+
+            .text-content {
+                font-size: 18px;
+            }
+        }
+
+        /* Extra Large Devices like tablets */
+        @media screen and (min-width: 1025px) and (max-width: 1366px) {
+            .container {
+                max-width: 90%; /* Make better use of wider screens */
+            }
+
+            .container h1 {
+                font-size: 40px;
+            }
+
+            .profile-img {
+                width: 180px;
+            }
+
+            .btn {
+                font-size: 16px;
+            }
+        }
+
+        /* Small mobile screens below 600px */
+        @media screen and (max-width: 600px) {
+            .container h1 {
+                font-size: 28px;
+            }
+
+            .profile-img {
+                width: 130px;
+            }
+
+            .text-content {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Adjusted Overlay to lighten the background -->
+    <div class="overlay"></div>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="experience.html">Experience & Expertise</a>
+        <a href="projects.html">Social Projects & Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="text-section">
+            <div class="text-content">
+                <h2 class="highlight-text">Hello, My Name is</h2>
+                <h1>Puja Gongal Shrestha</h1>
+                <p>
+                With a dynamic background in critical thinking, strategic communication, digital marketing, networking, and project management, I bring a comprehensive skill set shaped by both leadership and collaborative teamwork. I have successfully managed and implemented multiple projects, demonstrating a strong ability to develop strategies that drive results and innovation. My approach is defined by energy, ambition, and adaptability, consistently striving for excellence and continuous improvement.
+                </p>
+                <p>I am passionate about leveraging my expertise in marketing, communication, and project management to contribute meaningfully to long-term success and innovation.</p>
+
+                <a href="contact.html" class="btn">Contact Me</a>
+            </div>
+
+            <!-- Profile Image Inside the Box -->
+            <img src="Profile.jpg" class="profile-img" alt="Puja Gongal Shrestha">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Puja Gongal Shrestha</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('mountain.webp') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            text-align: right;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            margin-top: 100px;
+            text-align: left;
+            padding: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .contact-section p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #00A2FF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #007ACC;
+        }
+
+        /* Image styling */
+        .contact-image {
+            margin-left: 20px;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 150px;
+        }
+
+        /* Icon section for Gmail and LinkedIn */
+        .icon-section {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-section img {
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-section img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animation for Contact Me text */
+        .contact-me-text {
+		font-size: 20px;
+		font-weight: bold;
+		color: white;
+		position: fixed;
+		bottom: 30px;
+		right: 160px; /* Moved slightly more to the left */
+		z-index: 101;
+		display: flex;
+		align-items: center;
+		animation: fadeInOut 3s infinite;
+		}
+
+        .arrow {
+		margin-right: 5px;
+		display: inline-block;
+		transform: rotate(45deg);
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		padding: 3px;
+		animation: fadeInOut 3s infinite;
+		}
+
+		.arrow:first-child {
+		margin-right: 2px;
+		}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+    </style>
+    <script>
+    function sendMail() {
+        var name = document.getElementsByName('name')[0].value;
+        var email = document.getElementsByName('email')[0].value;
+        var message = document.getElementsByName('message')[0].value;
+
+        // Prepare mailto link with the 'email' field in the 'from' field and 'message' in the 'body'
+        var mailtoLink = "mailto:pgongalshrestha@gmail.com" + 
+                         "?subject=New message from " + encodeURIComponent(name) + 
+                         "&body=" + encodeURIComponent("From: " + email + "\n\nMessage: " + message);
+
+        // Open mail client with the mailto link
+        window.location.href = mailtoLink;
+    }
+    </script>
+
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="experience.html">Experience & Expertise</a>
+        <a href="projects.html">Social Projects & Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="contact-section">
+            <div class="form-section">
+                <h1>Let's connect</h1>
+                <p>If you would like to get in touch, feel free to send me a message below.</p>
+                
+                <form class="contact-form" onsubmit="sendMail(); return false;">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+
+            <!-- Contact image -->
+            <img src="contactme.webp" alt="Contact Me" class="contact-image">
+        </div>
+    </div>
+
+    <!-- Animated "Contact Me >>" Text with Arrows -->
+    <div class="contact-me-text">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        Contact Me >>
+    </div>
+
+    <!-- Gmail and LinkedIn Icons at the bottom right -->
+    <div class="icon-section">
+        <a href="mailto:pgongalshrestha@gmail.com">
+            <img src="gmail.jpg" alt="Gmail">
+        </a>
+        <a href="https://www.linkedin.com/in/puja-gongal-shrestha-1b4a9a19a" target="_blank">
+            <img src="linkedin-logo.png" alt="LinkedIn">
+        </a>
+    </div>
+
+</body>
+</html>

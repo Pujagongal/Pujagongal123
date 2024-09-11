@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Projects & Events</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Navigation Menu -->
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="experience.html">Experience & Expertise</a>
+        <a href="projects.html">Social Projects & Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <h1 class="page-heading">Social Projects & Events</h1>
+
+        <!-- Section 1: Academic Outreach & Social Impact -->
+        <div class="project-section">
+            <div class="dotted-line"></div> <!-- Dotted Line Added Here -->
+            <div class="carousel">
+                <div><img src="image1.jpg" alt="Project Image 1"></div>
+                <div><img src="image2.jpg" alt="Project Image 2"></div>
+                <div><img src="image3.jpg" alt="Project Image 3"></div>
+            </div>
+            <div class="arrow-box">
+                <h3>Academic Outreach & Social Impact</h3>
+                <ul>
+                    <li><strong>School Supplies Distribution in Nepal</strong> - Coordinated the distribution of paper pencils to schools across Nepal, reducing reliance on wooden pencils in support of an environmental safety initiative aimed at lowering deforestation rates and promoting sustainable learning materials.</li>
+                    <li><strong>Cultural Representation of Nepal</strong> - Actively participated in diverse cultural programs to represent Nepalese heritage, fostering cross-cultural understanding and global cultural exchange.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 2: Community & Environmental Initiatives -->
+        <div class="project-section">
+            <div class="dotted-line"></div> <!-- Dotted Line Added Here -->
+            <div class="carousel">
+                <div><img src="image4.jpg" alt="Project Image 4"></div>
+                <div><img src="image5.jpg" alt="Project Image 5"></div>
+                <div><img src="image6.jpg" alt="Project Image 6"></div>
+            </div>
+            <div class="arrow-box">
+                <h3>Community & Environmental Initiatives</h3>
+                <ul>
+                    <li><strong>Tree Plantation Drives</strong> - Led and actively participated in multiple tree plantation campaigns, contributing to the environment by promoting greener landscapes and improving air quality in local communities.</li>
+                    <li><strong>Animal Welfare Support</strong> - Organized and executed programs to feed stray dogs and donated to caretakers, providing essential resources for the care and well-being of animals in need.</li>
+                    <li><strong>Street and River Clean-Up Initiatives</strong> - Spearheaded the clean-up of local streets and rivers, promoting hygiene, sustainability, and environmental conservation through community engagement.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Section 3: Corporate Social Responsibility -->
+        <div class="project-section">
+            <div class="dotted-line"></div> <!-- Dotted Line Added Here -->
+            <div class="carousel">
+                <div><img src="image7.jpg" alt="Project Image 7"></div>
+                <div><img src="image8.jpg" alt="Project Image 8"></div>
+                <div><img src="image9.jpg" alt="Project Image 9"></div>
+            </div>
+            <div class="arrow-box">
+                <h3>Corporate Social Responsibility</h3>
+                <ul>
+                    <li><strong>Waterforall Initiative</strong> - Led the collection of donations through the sale of eco-friendly merchandise, supporting economically disadvantaged countries lacking access to clean water resources. Successfully raised awareness about water scarcity and environmental conservation.</li>
+                    <li><strong>Nacht der Technik Participation</strong> - Volunteered in a public outreach event aimed at educating diverse audiences on vacuum technology, providing demonstrations and tours.</li>
+                    <li><strong>Family Day Event Management</strong> - Organized the Leybold Family Day event to foster employee engagement and strengthen workplace culture. Managed giveaways and organized activities for employees and their families.</li>
+                    <li><strong>Diversity and Inclusion Advocacy</strong> - Contributed to Leybold's diversity initiatives by writing articles and conducting interviews with female leaders, advocating for women's empowerment by sharing inspirational stories within the company.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>

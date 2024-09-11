@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puja Gongal Shrestha - About Me</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background: url('mountain.webp') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+
+        /* Overlay for darkened effect */
+        .overlay {
+            position: fixed; /* Ensure it covers the whole page */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness */
+            z-index: 1; /* Ensure it's layered above the background image */
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            text-align: right;
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            margin-top: 100px;
+            text-align: left;
+            padding: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2; /* Ensure the text content is layered above the overlay */
+        }
+
+        .container h1 {
+            font-size: 40px; /* Reduced size for better layout */
+            margin-bottom: 20px;
+        }
+
+        .text-section {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent text box */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .text-content {
+            width: 60%;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .profile-img {
+            width: 250px; /* Adjust size of image */
+            height: auto;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .highlight-text {
+            color: #00A2FF;
+            font-size: 18px;
+        }
+
+        /* Ensure responsive design for smaller screens */
+        @media screen and (max-width: 768px) {
+            .text-section {
+                flex-direction: column;
+            }
+
+            .profile-img {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .text-content {
+                width: 100%;
+            }
+
+            .container h1 {
+                font-size: 32px; /* Further reduce for small screens */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="experience.html">Experience & Expertise</a>
+        <a href="projects.html">Social Projects & Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <div class="text-section">
+            <div class="text-content">
+                <h1>About Me</h1>
+                <p>
+                    With a passion for bringing ideas to life, I have honed a unique blend of marketing, communication, and project management expertise that drives results. 
+                    Over the years, I’ve built a reputation for crafting strategies that not only connect brands to their audience but also inspire action. My approach is rooted 
+                    in creativity, collaboration, and a relentless pursuit of excellence, ensuring that every project I lead turns into a success story. Whether it's launching 
+                    campaigns, managing complex projects, or building a brand's voice, my mission is clear: to deliver meaningful impact with precision and heart.
+                </p>
+
+                <h2 class="highlight-text">A Glimpse of My Professional Journey</h2>
+                <ul>
+                    <li><strong>Marketing Visionary:</strong> Developed and executed marketing strategies that increased brand visibility and sales support across various diverse industries.</li>
+                    <li><strong>Communications Expert:</strong> Created compelling brand stories and communication plans that fostered strong connections with audiences and stakeholders via social media channels.</li>
+                    <li><strong>Project Leadership:</strong> Led cross-functional teams in managing large-scale projects in marketing, communication, social community, and supply chain areas, consistently delivering on time, within scope, and exceeding client expectations.</li>
+                    <li><strong>Creative Problem Solver:</strong> Known for innovative thinking, I transform challenges into opportunities, pushing boundaries for better results.</li>
+                    <li><strong>Data-Driven Decision Making:</strong> Leveraged analytics and insights to fine-tune strategies for optimized performance and measurable success.</li>
+                </ul>
+
+                <p>
+                    Each role, challenge, and success has sharpened my skills and fueled my drive to make every project stand out. Let's work together to create something extraordinary!
+                </p>
+            </div>
+
+            <!-- Profile Image added at the side -->
+            <img src="Pro.jpeg" alt="Profile Image" class="profile-img">
+        </div>
+    </div>
+
+</body>
+</html>
