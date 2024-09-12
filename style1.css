@@ -1,144 +1,88 @@
-/* General Styles */
-body, html {
+/* General reset for consistent margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
     font-family: Arial, sans-serif;
-    color: white;
-    background: url('mountain.webp') no-repeat center center fixed;
-    background-size: cover;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    text-align: right;
-    padding: 18px 0;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 14px 20px;
-}
-
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
+/* Styling for containers */
 .container {
-    margin-top: 100px;
+    width: 80%; /* Adjust as needed */
+    max-width: 1200px; /* Max width to maintain layout consistency */
+    margin: 0 auto;
     padding: 20px;
-    text-align: left;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 2;
 }
 
-/* Heading Styling */
-.page-heading {
-  color: #FFFFFF; /* Bright white text */
-  font-size: 36px; /* Adjust size as needed */
-  margin-bottom: 20px; /* Spacing below */
-  font-weight: bold; /* Bold text */
-  background-color: rgba(0, 0, 0, 0.6); /* Light black background */
-  padding: 10px 20px; /* Padding inside the box */
-  border-radius: 10px; /* Rounded corners */
-  display: inline-block; /* Makes the box only as wide as the text */
-  
-  /* Add these properties to center the heading */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; /* Ensures the text inside the box is centered */
-  width: fit-content; /* Ensures the box fits the content */
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%); /* Adjusts the box position to be perfectly centered */
-}
-
-/* White Dotted Line Styling */
-.dotted-line {
-    width: 100%;
-    border-bottom: 5px dotted white;
+/* Uniform section spacing across all pages */
+section {
+    padding: 40px 0;
     margin-bottom: 20px;
 }
 
-/* Project Section Styling */
-.project-section {
-    margin-bottom: 40px;
+/* Image styling to ensure proper sizing */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-/* Carousel Styling */
-.carousel {
-    width: 100%;
+/* Specific styling for your "Social Projects & Events" section */
+.projects-section {
+    text-align: center;
+    background-color: #fff; /* Optional: to differentiate from other sections */
+    padding: 40px 0;
+}
+
+.projects-section img {
+    width: 100%; /* Ensure images take full width of container */
+    height: auto; /* Maintain image aspect ratio */
+    max-width: 300px; /* Prevents images from being too large */
+    margin-bottom: 20px; /* Adds space between images */
+}
+
+/* Title styling */
+h1, h2, h3 {
     margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
 }
 
-.carousel img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Arrow Box Styling */
-.arrow-box {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    position: relative;
-    flex: 1;
-    text-align: left;
-}
-
-.arrow-box h3 {
-    background-color: #2b7bb9;
+/* Button styling */
+button, .btn {
+    background-color: #007bff; /* Adjust button color */
     color: white;
-    padding: 10px;
-    border-radius: 4px;
-    display: inline-block;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Bullet Points Styling */
-.arrow-box ul {
-    list-style: none;
-    padding: 0;
-    font-size: 18px; /* Increased font size for bullet point text */
-    line-height: 1.8;
+button:hover, .btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
-.arrow-box ul li {
-    margin: 10px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.arrow-box ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #2b7bb9;
-    font-size: 24px;
-    top: 5px;
-}
-
-/* Ensure Responsiveness */
-@media screen and (max-width: 768px) {
-    .arrow-box {
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
         padding: 10px;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .projects-section img {
+        max-width: 100%; /* Ensure full width on small screens */
     }
 }
