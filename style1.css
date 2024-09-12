@@ -24,13 +24,13 @@ body, html {
     width: 100%;
     z-index: 100;
     text-align: right;
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     padding: 14px 20px;
 }
