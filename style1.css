@@ -24,13 +24,13 @@ body, html {
     width: 100%;
     z-index: 100;
     text-align: right;
-    padding: 12px 0;
+    padding: 18px 0;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
     padding: 14px 20px;
 }
@@ -52,21 +52,23 @@ body, html {
 
 /* Heading Styling */
 .page-heading {
-  color: #FFFFFF;
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
+  color: #FFFFFF; /* Bright white text */
+  font-size: 36px; /* Adjust size as needed */
+  margin-bottom: 20px; /* Spacing below */
+  font-weight: bold; /* Bold text */
+  background-color: rgba(0, 0, 0, 0.6); /* Light black background */
+  padding: 10px 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Makes the box only as wide as the text */
+  
+  /* Add these properties to center the heading */
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  width: fit-content;
+  text-align: center; /* Ensures the text inside the box is centered */
+  width: fit-content; /* Ensures the box fits the content */
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Adjusts the box position to be perfectly centered */
 }
 
 /* White Dotted Line Styling */
@@ -94,29 +96,16 @@ body, html {
     border-radius: 8px;
 }
 
-/* Ensure Flexbox Layout and Equal Column Height */
-.project-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project-card {
+/* Arrow Box Styling */
+.arrow-box {
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 20px; /* Adjusted padding */
-    text-align: left;
-    width: 100%;
-    max-width: 300px; /* Adjusted max-width to match */
+    padding: 20px;
+    position: relative;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    text-align: left;
 }
 
-.project-card h3 {
+.arrow-box h3 {
     background-color: #2b7bb9;
     color: white;
     padding: 10px;
@@ -125,20 +114,20 @@ body, html {
 }
 
 /* Bullet Points Styling */
-.project-card ul {
+.arrow-box ul {
     list-style: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 18px; /* Increased font size for bullet point text */
     line-height: 1.8;
 }
 
-.project-card ul li {
+.arrow-box ul li {
     margin: 10px 0;
     padding-left: 20px;
     position: relative;
 }
 
-.project-card ul li::before {
+.arrow-box ul li::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -149,12 +138,7 @@ body, html {
 
 /* Ensure Responsiveness */
 @media screen and (max-width: 768px) {
-    .project-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .project-card {
-        max-width: 100%;
-        margin-bottom: 20px;
+    .arrow-box {
+        padding: 10px;
     }
 }
