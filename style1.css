@@ -52,21 +52,23 @@ body, html {
 
 /* Heading Styling */
 .page-heading {
-  color: #FFFFFF;
-  font-size: 36px;
-  margin-bottom: 20px;
-  font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: inline-block;
+  color: #FFFFFF; /* Bright white text */
+  font-size: 36px; /* Adjust size as needed */
+  margin-bottom: 20px; /* Spacing below */
+  font-weight: bold; /* Bold text */
+  background-color: rgba(0, 0, 0, 0.6); /* Light black background */
+  padding: 10px 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners */
+  display: inline-block; /* Makes the box only as wide as the text */
+  
+  /* Add these properties to center the heading */
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
-  width: fit-content;
+  text-align: center; /* Ensures the text inside the box is centered */
+  width: fit-content; /* Ensures the box fits the content */
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Adjusts the box position to be perfectly centered */
 }
 
 /* White Dotted Line Styling */
