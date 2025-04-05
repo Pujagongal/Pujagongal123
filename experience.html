@@ -1,32 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Experience & Expertise</title>
-  <link rel="stylesheet" href="style.css">
   <style>
-        /* Add the following CSS for the image and heading */
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('mountain.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      margin: 0;
+      padding: 0 10px;
+      list-style: none;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 8px 12px;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background-color: #ddd;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .experience-section {
+      padding: 100px 20px 40px;
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .experience-heading {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #00A2FF;
+    }
+
     .recommendation-image {
       display: flex;
       justify-content: center;
-      margin: 20px 0; /* Space above and below the image */
+      margin: 20px 0;
     }
+
     .recommendation-image img {
-      max-width: 100%; /* Ensures the image is responsive */
-      height: auto; /* Maintain aspect ratio */
-      max-height: 400px; /* Control maximum height if needed */
-      border-radius: 10px; /* Optional: Rounded corners */
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      max-height: 400px;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .experience-column {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .experience-column ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .experience-column > ul > li {
+      margin-bottom: 10px;
+    }
+
+    .experience-column p {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .experience-column ul ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    .experience-column ul ul li {
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      background-color: #00A2FF;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    /* Animation for date movement */
+    .animated-date {
+      display: inline-block;
+      position: relative;
+      animation: moveLeftRight 4s ease-in-out infinite;
+    }
+
+    @keyframes moveLeftRight {
+      0%, 100% {
+        left: 0;
+      }
+      50% {
+        left: 10px;
+      }
+    }
+
+    /* Mobile Responsive Styling */
+    @media screen and (max-width: 768px) {
+      .experience-heading {
+        font-size: 28px;
+      }
+
+      nav ul li a {
+        font-size: 14px;
+        padding: 6px 10px;
+      }
+
+      .experience-section {
+        padding: 120px 15px 40px;
+      }
+
+      .experience-column p {
+        font-size: 16px;
+      }
+
+      .experience-column ul ul li {
+        font-size: 15px;
+      }
+
+      .recommendation-image img {
+        max-height: 280px;
+      }
     }
   </style>
 </head>
 <body>
+
+  <div class="overlay"></div>
+
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
-        <li><a href="experience.html">Experience & Expertise</a></li>
+        <li><a href="experience.html">Experience</a></li>
         <li><a href="projects.html">Social Projects & Events</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -34,79 +201,90 @@
   </header>
 
   <section class="experience-section">
-    <div class="overlay"></div>
-    <div class="experience-header">
     <h1 class="experience-heading">Experience & Expertise</h1>
+
     <div class="recommendation-image">
       <img src="Expert.webp" alt="Experience and Expertise">
     </div>
-  </div>
-    <div class="content">
-      <div class="experience-container">
-        <div class="experience-column">
-          <ul>
-            <li><span class="dot"></span><strong>May 2012 – December 2012</strong></li>
-            <p><strong>IT Sutra Pvt. Ltd., Kathmandu, Nepal</strong><br>Senior Marketing and Sales Executive</p>
-            <ul>
-              <li>• Led the integration of digital Interactive Presentation Boards, gradually increasing market engagement by 75%</li>
-              <li>• Educational storyboard project content creation with high involvement of 15 different schools in Kathmandu</li>
-	      <li>• Coordinated creative customization of business card designs as per customer requirements in banks, theatres and educational sectors</li>
-            </ul>
-          </ul>
-        </div>
 
-        <div class="experience-column">
-          <ul>
-            <li><span class="dot"></span><strong>October 2015 – May 2016</strong></li>
-            <p><strong>Rolling Plans Pvt. Ltd., Kathmandu Nepal</strong><br>B2C Tele sales Representative</p>
-            <ul>
-              <li>• Provided customized telecommunication solutions increasing customer satisfaction, retention, and sales to 85%</li>
-              <li>• More than 80% consistent quality call assessment</li>
-            </ul>
-          </ul>
-        </div>
+    <div class="experience-container">
 
-        <div class="experience-column">
-          <ul>
-            <li><span class="dot"></span><strong>August 2021 – July 2023</strong></li>
-            <p><strong>Leybold GmbH, Cologne Germany</strong><br>International Flex Graduate</p>
-            <ul>
-              <li>• Web Customer Experience and communication for multi brands in Belgium</li>
-			 <li>✓Outcome:</li>
-			 <li>-Global business profile project engaging stakeholders by 80% to improve brand, location and customer experience visibility</li> 
-			 <li>-SEO enhancement project of Precision plus website enhancing 700 product description contents</li>
-              <li>• Sales and Marketing in Edwards USA</li>
-			  <li>✓	Outcome:</li>
-			  <li>-Install base and lead generation project focusing on customer segmentation, dashboard and reporting, data and territory management</li>
-			  <li>-Coordinated with service sales engineers at the customer center fixing sales channels across 9 regional territories</li>
-			  <li>• Marketing and communication for multi brands in Cologne Germany</li>
-			  <li>✓	Outcome:</li>
-			  <li>-Cross departmental SharePoint creation project of 9 different functional departments</li>
-			  <li>-Thursday Wiki Campaign and “Do you know” SM posts creation </li>
-			  <li>-Successful story posts of products launch, events, research and improvement of products, increase in sales and productivity in Sway</li>
-			  <li>• Digital Marketing and customer order management for Leybold in Customer Centers Germany</li>
-			  <li>✓	Outcome:</li>
-			  <li>-Conducted market research to identify target audiences resulting in potential 124 leads at key trade shows</li>
-		    	  <li>-Managed weekly social media campaigns, increasing brand awareness and customer engagement across media like Facebook, Instagram and LinkedIn</li>
-            </ul>
-          </ul>
-        </div>
+      <!-- Experience 1 -->
+      <div class="experience-column">
+        <ul>
+          <li><span class="dot"></span><strong><span class="animated-date">May 2012 – December 2012</span></strong></li>
+        </ul>
+        <p>IT Sutra Pvt. Ltd., Kathmandu, Nepal<br>Senior Marketing and Sales Executive</p>
+        <ul>
+          <li>• Led integration of digital Interactive Presentation Boards, increasing market engagement by 75%</li>
+          <li>• Created educational storyboard content involving 15 schools in Kathmandu</li>
+          <li>• Customized business card designs for banks, theatres, and educational sectors</li>
+        </ul>
+      </div>
 
-        <div class="experience-column">
-          <ul>
-            <li><span class="dot"></span><strong>August 2023 – Present</strong></li>
-            <p><strong>Leybold GmbH, Cologne Germany</strong><br>Project Manager SCM</p>
+      <!-- Experience 2 -->
+      <div class="experience-column">
+        <ul>
+          <li><span class="dot"></span><strong><span class="animated-date">October 2015 – May 2016</span></strong></li>
+        </ul>
+        <p>Rolling Plans Pvt. Ltd., Kathmandu, Nepal<br>B2C Tele Sales Representative</p>
+        <ul>
+          <li>• Provided customized telecom solutions, boosting customer satisfaction and sales to 85%</li>
+          <li>• Achieved over 80% in consistent quality call assessments</li>
+        </ul>
+      </div>
+
+      <!-- Experience 3 -->
+      <div class="experience-column">
+        <ul>
+          <li><span class="dot"></span><strong><span class="animated-date">August 2021 – July 2023</span></strong></li>
+        </ul>
+        <p>Leybold GmbH, Cologne Germany<br>International Flex Graduate</p>
+        <ul>
+          <li>• Web customer experience for multi-brands (Belgium)</li>
+          <li>✓ Outcome:
             <ul>
-              <li>• Led the EMEA safety stock proposal and implementation project for 92 items, improving inventory reliability and minimizing stock-outs</li>
-              <li>• Managed lead time automation project to streamline manufacturing and transportation processes</li>
-              <li>• Coordinated SAP master data settings, testing, and training documentation enhancing data accuracy, and cross communication</li>
+              <li>- Global business profile project engaging 80% stakeholders</li>
+              <li>- SEO enhancement of 700+ product descriptions</li>
             </ul>
-          </ul>
-        </div>
+          </li>
+          <li>• Sales and Marketing (USA)
+            <ul>
+              <li>- Lead generation and segmentation dashboards across 9 regions</li>
+              <li>- Sales channel coordination with engineers</li>
+            </ul>
+          </li>
+          <li>• Marketing & Communication (Germany)
+            <ul>
+              <li>- SharePoint project for 9 departments</li>
+              <li>- “Do you know” and campaign posts</li>
+              <li>- Product launch storytelling on Sway</li>
+            </ul>
+          </li>
+          <li>• Digital Marketing and Order Management
+            <ul>
+              <li>- 124 leads generated via trade show research</li>
+              <li>- Weekly social media campaigns (FB, Instagram, LinkedIn)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Experience 4 -->
+      <div class="experience-column">
+        <ul>
+          <li><span class="dot"></span><strong><span class="animated-date">August 2023 – Present</span></strong></li>
+        </ul>
+        <p>Leybold GmbH, Cologne Germany<br>Project Manager SCM</p>
+        <ul>
+          <li>• EMEA safety stock project for 92 items, improving inventory reliability</li>
+          <li>• Lead time automation streamlining manufacturing and transport</li>
+          <li>• SAP data settings/testing & training documentation across teams</li>
+        </ul>
       </div>
     </div>
   </section>
-  <!-- Add recommendation image at the end -->
+
   <div class="recommendation-image">
     <img src="reccomen.jpg" alt="Recommendations">
   </div>
