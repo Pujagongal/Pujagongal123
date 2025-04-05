@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Experience & Expertise</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
       font-family: Arial, sans-serif;
       background: url('mountain.webp') no-repeat center center fixed;
       background-size: cover;
@@ -34,21 +35,23 @@
       top: 0;
       width: 100%;
       z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       padding: 10px 0;
     }
 
     nav ul {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
+      flex-wrap: wrap;
       margin: 0;
-      padding: 0 10px;
+      padding: 0;
       list-style: none;
       justify-content: center;
     }
 
     nav ul li {
-      margin: 0 10px;
+      margin: 5px 10px;
     }
 
     nav ul li a {
@@ -58,6 +61,7 @@
       font-size: 16px;
       padding: 8px 12px;
       display: inline-block;
+      white-space: nowrap;
     }
 
     nav ul li a:hover {
@@ -155,15 +159,29 @@
       }
     }
 
-    /* Mobile Responsive Styling */
+    /* Responsive Design */
     @media screen and (max-width: 768px) {
-      .experience-heading {
-        font-size: 28px;
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 6px 0;
       }
 
       nav ul li a {
         font-size: 14px;
         padding: 6px 10px;
+      }
+
+      .experience-heading {
+        font-size: 28px;
       }
 
       .experience-section {
@@ -181,6 +199,10 @@
       .recommendation-image img {
         max-height: 280px;
       }
+
+      .animated-date {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -188,17 +210,15 @@
 
   <div class="overlay"></div>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="projects.html">Social Projects & Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="projects.html">Social Projects & Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <section class="experience-section">
     <h1 class="experience-heading">Experience & Expertise</h1>
@@ -279,15 +299,3 @@
         <ul>
           <li>• EMEA safety stock project for 92 items, improving inventory reliability</li>
           <li>• Lead time automation streamlining manufacturing and transport</li>
-          <li>• SAP data settings/testing & training documentation across teams</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <div class="recommendation-image">
-    <img src="reccomen.jpg" alt="Recommendations">
-  </div>
-
-</body>
-</html>
