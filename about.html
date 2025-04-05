@@ -1,169 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puja Gongal Shrestha - About Me</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100%;
-            background: url('mountain.webp') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            color: white;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puja Gongal Shrestha - About Me</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        /* Overlay for darkened effect */
-        .overlay {
-            position: fixed; /* Ensure it covers the whole page */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Adjust darkness */
-            z-index: 1; /* Ensure it's layered above the background image */
-        }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      background: url('mountain.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
 
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.7);
-            overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            text-align: right;
-        }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
 
-        .navbar a {
-            display: inline-block;
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      overflow-x: auto;
+      white-space: nowrap;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      text-align: center;
+    }
 
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+    .navbar a {
+      display: inline-block;
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
 
-        .container {
-            margin-top: 100px;
-            text-align: left;
-            padding: 20px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 2; /* Ensure the text content is layered above the overlay */
-        }
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-        .container h1 {
-            font-size: 40px; /* Reduced size for better layout */
-            margin-bottom: 20px;
-        }
+    .container {
+      margin-top: 90px;
+      padding: 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 2;
+    }
 
-        .text-section {
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent text box */
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
+    .text-section {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: flex-start;
+    }
 
-        .text-content {
-            width: 60%;
-            font-size: 16px;
-            line-height: 1.5;
-        }
+    .text-content {
+      flex: 1 1 60%;
+      font-size: 17px;
+      line-height: 1.6;
+    }
 
-        .profile-img {
-            width: 250px; /* Adjust size of image */
-            height: auto;
-            border-radius: 10px;
-            margin-left: 20px;
-        }
+    .text-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
 
-        .highlight-text {
-            color: #00A2FF;
-            font-size: 18px;
-        }
+    .text-content h2 {
+      font-size: 22px;
+      margin-top: 30px;
+    }
 
-        /* Ensure responsive design for smaller screens */
-        @media screen and (max-width: 768px) {
-            .text-section {
-                flex-direction: column;
-            }
+    ul {
+      padding-left: 20px;
+    }
 
-            .profile-img {
-                width: 100%;
-                margin-top: 20px;
-            }
+    ul li {
+      margin-bottom: 10px;
+    }
 
-            .text-content {
-                width: 100%;
-            }
+    .highlight-text {
+      color: #00A2FF;
+    }
 
-            .container h1 {
-                font-size: 32px; /* Further reduce for small screens */
-            }
-        }
+    .profile-img {
+      flex: 1 1 250px;
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-    </style>
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .navbar a {
+        font-size: 14px;
+        padding: 12px 10px;
+      }
+
+      .container {
+        padding: 15px;
+        margin-top: 120px;
+      }
+
+      .text-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .text-content {
+        font-size: 16px;
+        width: 100%;
+      }
+
+      .text-content h1 {
+        font-size: 28px;
+      }
+
+      .text-content h2 {
+        font-size: 20px;
+      }
+
+      .profile-img {
+        max-width: 180px;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="overlay"></div>
 
-    <!-- Dark Overlay -->
-    <div class="overlay"></div>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Social Projects & Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="experience.html">Experience & Expertise</a>
-        <a href="projects.html">Social Projects & Events</a>
-        <a href="contact.html">Contact</a>
+  <div class="container">
+    <div class="text-section">
+      <div class="text-content">
+        <h1>About Me</h1>
+        <p>
+          I come from the land of the highest mountain in the world, which has shaped my professional and personal identity since childhood. Like a mountain, I embody resilience, 
+          strength, and ambition, always striving to rise above challenges and reach new heights. With a solid foundation of patience and integrity, I approach each task with determination 
+          and creativity.
+        </p>
+        <p> 
+          This continuous commitment to growth and reflection not only grounds me but also fuels my drive to innovate, making me a reliable and persistent professional who aims to 
+          inspire and uplift others.
+        </p>
+        <p> 
+          With a passion for bringing ideas to life, I have honed a unique blend of marketing, communication, and project management expertise that drives results. Over the years, 
+          I’ve crafted strategies that connect brands to their audience and inspire action. My approach is rooted in creativity, collaboration, and excellence.
+        </p>
+
+        <h2 class="highlight-text">A Glimpse of My Professional Journey</h2>
+        <ul>
+          <li><strong>Marketing Visionary:</strong> Developed and executed strategies that increased visibility and sales across industries.</li>
+          <li><strong>Communications Expert:</strong> Created brand stories and social content that deeply engaged audiences.</li>
+          <li><strong>Project Leadership:</strong> Led cross-functional teams across marketing, communication, social, and supply chain sectors.</li>
+          <li><strong>Creative Problem Solver:</strong> Transformed challenges into strategic opportunities.</li>
+          <li><strong>Data-Driven:</strong> Used analytics to optimize performance and deliver measurable success.</li>
+        </ul>
+
+        <p>
+          Each role, challenge, and success has sharpened my skills and fueled my drive. Let’s work together to create something extraordinary!
+        </p>
+      </div>
+      <img src="Pro.jpeg" alt="Profile Image" class="profile-img" />
     </div>
-
-    <div class="container">
-        <div class="text-section">
-            <div class="text-content">
-                <h1>About Me</h1>
-                <p>
-                    I come from the land of the highest mountain in the world, which has shaped my professional and personal identity since childhood. Like a mountain, I embody resilience, 
-                    strength, and ambition, always striving to rise above challenges and reach new heights. With a solid foundation of patience and integrity, I approach each task with determination 
-                    and creativity. This continuous commitment to growth and reflection not only grounds me but also fuels my drive to innovate, making me a reliable and persistent professional who aims to 
-                    inspire and uplift others.
-                </p>
-                <p> 
-                    With a passion for bringing ideas to life connecting to my personality, I have honed a unique blend of marketing, communication, and project management expertise that drives results. 
-                    Over the years, I have built a reputation for crafting strategies that not only connect brands to their audience but also inspire action. My approach is rooted 
-                    in creativity, collaboration, and a relentless pursuit of excellence, ensuring that every project I lead turns into a success story. Whether it's launching 
-                    campaigns, managing complex projects, or building a brand's voice, my mission is clear: to deliver meaningful impact with precision and heart.
-                </p>
-
-                <h2 class="highlight-text">A Glimpse of My Professional Journey</h2>
-                <ul>
-                    <li><strong>Marketing Visionary:</strong> Developed and executed marketing strategies that increased brand visibility and sales support across various diverse industries.</li>
-                    <li><strong>Communications Expert:</strong> Created compelling brand stories and communication plans that fostered strong connections with audiences and stakeholders via social media channels.</li>
-                    <li><strong>Project Leadership:</strong> Led cross-functional teams in managing large-scale projects in marketing, communication, social community, and supply chain areas, consistently delivering on time, within scope, and exceeding client expectations.</li>
-                    <li><strong>Creative Problem Solver:</strong> Known for innovative thinking, I transform challenges into opportunities, pushing boundaries for better results.</li>
-                    <li><strong>Data-Driven Decision Making:</strong> Leveraged analytics and insights to fine-tune strategies for optimized performance and measurable success.</li>
-                </ul>
-
-                <p>
-                    Each role, challenge, and success has sharpened my skills and fueled my drive to make every project stand out. Let's work together to create something extraordinary!
-                </p>
-            </div>
-
-            <!-- Profile Image added at the side -->
-            <img src="Pro.jpeg" alt="Profile Image" class="profile-img">
-        </div>
-    </div>
-
+  </div>
 </body>
 </html>
