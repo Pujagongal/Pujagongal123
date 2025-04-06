@@ -36,10 +36,14 @@
       top: 0;
       width: 100%;
       z-index: 100;
+      overflow-x: auto;
+    }
+
+    .navbar-inner {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px 0;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      min-width: max-content;
     }
 
     .navbar a {
@@ -112,9 +116,8 @@
 
     /* Responsive Mobile Styling */
     @media screen and (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: center;
+      .navbar-inner {
+        justify-content: flex-start;
       }
 
       .navbar a {
@@ -159,11 +162,13 @@
 
   <!-- Navigation -->
   <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="experience.html">Experience</a>
-    <a href="projects.html">Social Projects & Events</a>
-    <a href="contact.html">Contact</a>
+    <div class="navbar-inner">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Social Projects & Events</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </div>
 
   <!-- Main Content -->
